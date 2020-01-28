@@ -1,0 +1,24 @@
+---
+
+- name: create folder structure
+  file:
+    name: "{{ docker_gitlab_base_dir }}{{ item }}"
+    state: directory
+  with_items:
+    - '/config'
+    - '/logs'
+    - '/data'
+
+- name: "create network: {{ docker_gitlab_traefik_network }}"
+  docker_network:
+    name: "{{ docker_gitlab_traefik_network }}"
+
+- name: write docker-compose.yml
+  template:
+    src: 'templates/docker-compose.yml.j2'
+    dest: "{{ docker_gitlab_base_dir }}/docker-compose.yml"
+
+- name: control container
+  docker_compose:
+    project_src: "{{ docker_gitlab_base_dir }}"
+

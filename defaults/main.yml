@@ -1,0 +1,12 @@
+---
+
+# gitlab settings
+docker_gitlab_url: gitlab.local
+docker_gitlab_host_ssh_port: 1338
+docker_gitlab_conf_smtp_enable: "false"
+
+# traefik network
+docker_gitlab_traefik_network: traefik
+
+# place for configs and data
+docker_gitlab_base_dir: /opt/gitlab
