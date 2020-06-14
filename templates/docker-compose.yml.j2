@@ -2,7 +2,7 @@ version: "3"
 
 services:
   gitlab:
-    image: 'gitlab/gitlab-ce:latest'
+    image: "gitlab/gitlab-ce:{{ docker_gitlab_image_tag }}"
     container_name: gitlab
     hostname: {{ docker_gitlab_url }}
     environment:
