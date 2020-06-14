@@ -3,6 +3,7 @@
 # gitlab settings
 docker_gitlab_image_tag: latest
 docker_gitlab_url: gitlab.local
+docker_gitlab_host_ssh_port: 22
 docker_gitlab_conf_smtp_enable: "false"
 
 # traefik network
