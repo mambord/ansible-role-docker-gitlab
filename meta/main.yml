@@ -1,0 +1,20 @@
+---
+
+galaxy_info:
+  role_name: 'ansible-role-docker-gitlab'
+  author: 'Michael Ambord'
+  description: 'Ansible role to install gitlab on docker behind a traefik reverse proxy'
+
+  license: 'GPLv3'
+
+  min_ansible_version: '2.0.0'
+
+  platforms:
+  - name: Debian
+    versions:
+    - 10
+
+  galaxy_tags:
+    - 'gitlab'
+
+dependencies: []
